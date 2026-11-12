@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'">
+<title>鹈鹕快递 · 海湾邮局</title>
+<!-- STYLES -->
+</head><body>
+<main id="app">
+<canvas id="view" aria-label="三维游戏场景"></canvas><canvas id="mesh" aria-hidden="true"></canvas>
+<div class="shade"></div><div id="rain" hidden aria-hidden="true"></div>
+<div id="cockpit" hidden aria-hidden="true">
+ <svg id="wiperGlass" viewBox="0 0 1200 540" preserveAspectRatio="none"><g id="wiper"><path d="M609 514L503 434L297 350" fill="none" stroke="#101c23" stroke-width="8"/><path d="M290 347L482 425" fill="none" stroke="#1b2a31" stroke-width="6"/><path d="M612 517L508 438" fill="none" stroke="#677b7e" stroke-opacity=".45" stroke-width="2"/></g></svg>
+ <svg id="dashArt" viewBox="0 0 1200 320" preserveAspectRatio="none">
+ <defs>
+  <linearGradient id="dashVinyl" x2="0" y2="1"><stop stop-color="#35434c"/><stop offset=".40" stop-color="#19232d"/><stop offset="1" stop-color="#10161c"/></linearGradient>
+  <linearGradient id="dashMetal" x2="1" y2="1"><stop stop-color="#a1abad"/><stop offset=".5" stop-color="#39464b"/><stop offset="1" stop-color="#828d91"/></linearGradient>
+  <linearGradient id="wheelGrip" x2="0" y2="1"><stop stop-color="#526066"/><stop offset=".25" stop-color="#343d42"/><stop offset="1" stop-color="#11181b"/></linearGradient>
+  <linearGradient id="glove" x2="1" y2="1"><stop stop-color="#ece4d0"/><stop offset=".50" stop-color="#b9afa0"/><stop offset="1" stop-color="#716967"/></linearGradient>
+  <radialGradient id="dialFace"><stop stop-color="#1b2a33"/><stop offset="1" stop-color="#080e14"/></radialGradient>
+  <pattern id="carbon" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0 0h3v3H0zm3 3h3v3H3z" fill="#a5bac0" opacity=".14"/></pattern>
+ </defs>
+ <path d="M0 5L76 48Q244 91 377 88Q410 48 600 48Q790 48 823 88Q956 91 1124 48L1200 5V320H0Z" fill="url(#dashVinyl)" stroke="#718086" stroke-width="4"/>
+ <path d="M0 56Q195 113 391 119Q465 85 600 85Q735 85 809 119Q1005 113 1200 56V111Q1000 151 806 155Q709 122 600 122Q491 122 394 155Q200 151 0 111Z" fill="url(#carbon)"/>
+ <path d="M0 66Q178 126 390 122M810 122Q1022 126 1200 66" fill="none" stroke="#da6d55" stroke-width="3"/>
+ <path d="M348 203Q351 81 443 72L757 72Q849 81 852 203L802 224H398Z" fill="#0a1219" stroke="#3e525a" stroke-width="5"/>
+ <path d="M362 129Q377 86 441 78H759Q823 86 838 129" fill="none" stroke="#77898d" stroke-width="2"/>
+ <g id="dashDials" font-family="Consolas, monospace" text-anchor="middle"></g>
+ <rect x="549" y="97" width="102" height="79" rx="8" fill="#101d23" stroke="#61787f" stroke-width="2"/>
+ <text x="600" y="112" fill="#9bb9b7" font-family="monospace" text-anchor="middle" font-size="9" letter-spacing="3">GEAR</text>
+ <text id="gearDisplay" x="600" y="148" fill="#ffdd9f" font-family="Consolas,monospace" font-size="36" font-weight="bold" text-anchor="middle">N</text>
+ <text id="dashSpeed" x="600" y="167" fill="#d8f1e5" font-family="Consolas,monospace" font-size="12" text-anchor="middle"></text>
+ <rect x="566" y="184" width="68" height="4" rx="2" fill="#374b50"/>
+ <rect id="revBar" x="566" y="184" width="0" height="4" rx="2" fill="#88d9c1"/>
+ <g id="shiftLights"></g>
+ <g fill="#111b22" stroke="#465860" stroke-width="2">
+  <path d="M50 116L241 146L229 171L63 149Z"/><path d="M1150 116L959 146L971 171L1137 149Z"/>
+ </g>
+ <g stroke="#718087" stroke-width="2" opacity=".65"><path d="M75 130L227 155M78 139L219 161M1125 130L973 155M1122 139L981 161"/></g>
+ <g id="steering">
+  <path d="M493 221Q466 269 478 324H722Q734 269 707 221" fill="none" stroke="#11191d" stroke-width="26"/>
+  <path d="M487 217Q600 181 713 217L699 298Q600 322 501 298Z" fill="#212b31" stroke="#0d151b" stroke-width="7"/>
+  <path d="M498 223L573 258L626 258L704 223M600 280V318" fill="none" stroke="url(#dashMetal)" stroke-width="17" stroke-linejoin="round"/>
+  <path d="M483 276Q472 233 495 215Q600 189 705 215Q728 233 717 276" fill="none" stroke="url(#wheelGrip)" stroke-width="24" stroke-linecap="round"/>
+  <path d="M483 273Q476 234 496 221Q600 199 704 221Q724 234 717 273" fill="none" stroke="#a06155" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <path d="M574 248Q600 232 626 248L633 277Q600 296 567 277Z" fill="#172027" stroke="#617278" stroke-width="2"/>
+  <path d="m587 256 26 5-19 12 3-8z" fill="#f7bc78"/>
+  <path d="M461 275Q460 246 473 234Q489 229 498 243L504 259Q511 266 503 278L493 288L481 316L441 309Z M739 275Q740 246 727 234Q711 229 702 243L696 259Q689 266 697 278L707 288L719 316L759 309Z" fill="url(#glove)" stroke="#4c4e4a" stroke-width="3"/>
+  <path d="M473 253q14-5 26 8m-28 6q13-6 25 5m31 10h13m232-29q-14-5-26 8m28 6q-13-6-25 5" fill="none" stroke="#a09c92" stroke-width="2"/>
+ </g>
+ </svg>
+</div>
+<header class="top">
+<div class="logo"><span>➤</span><div><strong>鹈鹕快递</strong><small>PELICAN POST CLUB</small></div></div>
+<div id="progress" class="progress" hidden><div><b id="routeLabel"></b><span id="meter"></span></div><div class="bar"><i id="fill"></i></div></div>
+<nav><button id="cam" hidden>◉ 追尾</button><button id="sound" aria-label="开关音效">♪</button><button id="pause" hidden aria-label="暂停">Ⅱ</button></nav>
+</header>
+<div id="raceFx" hidden aria-hidden="true"></div><aside id="racePanel" class="racePanel" hidden><b id="racePlace"></b><span id="raceTime"></span><small id="raceStatus"></small><span id="raceBoost"></span></aside><div id="raceCount" class="raceCount" aria-live="polite" hidden></div>
+<div id="toast" class="toast" role="status" hidden></div>
+<div id="flash" class="flash"></div>
+<div class="dash" id="dash" hidden><div class="metrics"><span>速度<strong id="speed"></strong></span><span>船票<strong id="coins"></strong></span><span>耐久<strong id="hearts"></strong></span></div><div class="skill" id="skill"></div><button id="use" class="slot"><b id="item"></b><small id="hint"></small></button></div>
+<div id="touch" class="touch" hidden><div><button data-key="ArrowLeft" aria-label="左转">←</button><button data-key="ArrowRight" aria-label="右转">→</button></div><div><button data-key="ArrowDown">刹车</button><button data-key="ArrowUp">加速</button><button data-key="action" class="accent">特技</button></div></div>
+<section id="garage" class="garage" aria-label="车库和试衣间">
+<div class="garageCard">
+<div class="stamp"><span>珊瑚湾邮局 / 海岸运输部</span><span>档案 01</span></div>
+<h1 id="garageTitle">今日派送<em>选好装备，就出发。</em></h1>
+<div class="tabs" role="tablist" aria-label="车库页面"><button data-tab="pilot">01 角色</button><button data-tab="map">02 地图</button><button data-tab="vehicle">03 载具</button></div>
+<div id="garageContent"></div>
+<div class="garageFoot"><button class="primary" id="next"></button><button class="raceEntry" id="raceEntry" hidden></button><small id="garageHint">键盘与触控 · 可完全离线游玩</small></div>
+</div>
+<div class="lobbyFrame" aria-hidden="true"><div class="lobbyTop"><span id="lobbyKicker">OPERATIONS / 01</span><i></i><span id="lobbyZone">珊瑚湾空勤站</span></div><div class="lobbySide" id="lobbySide">PELICAN POST / FLIGHT DIVISION</div><div class="lobbyFloor"><b></b><b></b><b></b><b></b></div></div><div class="yesCaption" id="yesCaption" role="status" hidden><small>角色回应</small><strong>Yes!</strong></div>
+<div id="orbitPad" class="orbitPad" aria-hidden="true"></div><div class="showcase"><div class="showTag"><small id="stageTag"></small><b id="stageTitle"></b><span id="stageCopy"></span></div><div class="spin"><button id="saluteReplay" type="button">敬礼</button><button id="refView" type="button" aria-label="切换正交参考视角">三视图</button><button id="spinL" aria-label="向左旋转">↶</button><button id="spinR" aria-label="向右旋转">↷</button></div></div>
+</section>
+<section id="modal" class="overlay" hidden><div class="result"><div class="stamp"><span>PELICAN POST / 派送档案</span><span id="grade"></span></div><h2 id="resultTitle"></h2><p id="resultCopy"></p><div id="resultStats" class="stats"></div><p id="resultExtra"></p><button id="again" class="primary"></button><button id="back" class="secondary">返回邮局车库</button></div></section>
+</main>
+<!-- SCRIPTS -->
+</body></html>

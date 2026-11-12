@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<title>天际守护 · 鹈鹕快递角色设定</title>
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#102a36"/><stop offset="1" stop-color="#203f47"/></linearGradient>
+ <linearGradient id="sun" x2="0" y2="1"><stop stop-color="#ffd68e"/><stop offset="1" stop-color="#f59760"/></linearGradient>
+ <linearGradient id="iv" x2="1" y2="1"><stop stop-color="#fff9e8"/><stop offset=".56" stop-color="#f4e6c7"/><stop offset="1" stop-color="#c1b393"/></linearGradient>
+ <linearGradient id="navy" x2="1" y2="1"><stop stop-color="#467d98"/><stop offset=".52" stop-color="#285773"/><stop offset="1" stop-color="#172e4a"/></linearGradient>
+ <linearGradient id="cape" x2="1" y2="1"><stop stop-color="#ff9c71"/><stop offset=".46" stop-color="#d75350"/><stop offset="1" stop-color="#853849"/></linearGradient>
+ <linearGradient id="bill" x2="0" y2="1"><stop stop-color="#ffe3a0"/><stop offset="1" stop-color="#eea251"/></linearGradient>
+ <linearGradient id="pouch" x2=".6" y2="1"><stop stop-color="#ffc178"/><stop offset="1" stop-color="#df8a66"/></linearGradient>
+ <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M0 30V0H30" fill="none" stroke="#c5f0d1" stroke-opacity=".095"/></pattern>
+ <filter id="shadow"><feGaussianBlur stdDeviation="10"/></filter>
+ <clipPath id="circle"><circle cx="774" cy="449" r="326"/></clipPath>
+</defs>
+<path fill="url(#bg)" d="M0 0h1200v900H0z"/><path fill="url(#grid)" d="M22 22h1156v856H22z"/>
+<rect x="25" y="25" width="1150" height="850" rx="16" fill="none" stroke="#99cbb5" stroke-opacity=".45"/>
+<circle cx="774" cy="449" r="326" fill="url(#sun)"/>
+<g clip-path="url(#circle)">
+<path fill="#eab580" d="M407 505q101-106 210-16t238-31q117-78 260 11v330H407z"/>
+<path fill="#699f96" d="M402 559q117-71 252-22t236-10q99-43 225 22v230H402z"/>
+<path fill="#347376" d="M435 621q117-56 247-18t207-5q100-35 224 16v190H435z"/>
+<g fill="none" stroke="#ffdb9e" stroke-width="2" opacity=".5"><path d="M442 573h155m399 11h100m-661 50h188m397 15h55m-625 33h147m398 12h80M441 526h139"/></g>
+</g>
+<g fill="none" stroke="#fff4ce" opacity=".55"><circle cx="774" cy="449" r="340" stroke-dasharray="2 8"/><path d="M774 94v28m0 654v28M421 449h28m650 0h28"/></g>
+<g font-family="Microsoft YaHei, Arial, sans-serif">
+ <rect x="67" y="69" width="43" height="43" rx="9" fill="#a3edcb"/><path d="m78 81 23 9-23 11 6-10z" fill="#12373d"/>
+ <text x="124" y="87" fill="#fff0ce" font-size="15" font-weight="bold" letter-spacing="2">PELICAN POST</text>
+ <text x="124" y="107" fill="#a3edcb" font-size="10" letter-spacing="2.1">CHARACTER CONCEPT / 01</text>
+ <text x="67" y="228" fill="#a3edcb" font-size="14" letter-spacing="3">珊瑚湾邮局 · 特派邮差</text>
+ <text x="60" y="315" fill="#fff0d4" font-size="74" font-weight="900" letter-spacing="-5">天际</text>
+ <text x="60" y="398" fill="#fff0d4" font-size="74" font-weight="900" letter-spacing="-5">守护者</text>
+ <path d="M67 429h238" stroke="#a3edcb" stroke-opacity=".65" stroke-dasharray="4 5"/>
+ <text x="68" y="465" fill="#ffe0a9" font-size="16" font-weight="bold" letter-spacing="2">SKY COURIER</text>
+ <text x="68" y="509" fill="#b5d5c5" font-size="15">「风再大，信也会送到。」</text>
+ <g transform="translate(69 692)">
+ <text y="-16" fill="#a3edcb" font-size="10" letter-spacing="2">COSTUME PALETTE</text>
+ <circle cx="15" cy="12" r="13" fill="#f7e9cb"/><circle cx="51" cy="12" r="13" fill="#2c5575"/><circle cx="87" cy="12" r="13" fill="#db5c52"/><circle cx="123" cy="12" r="13" fill="#f7bb62"/>
+ </g>
+ <text x="68" y="837" fill="#a3edcb" font-size="11" letter-spacing="2">CORAL BAY / HERO OUTFIT</text>
+ <text x="1109" y="837" fill="#a3edcb" font-size="12" letter-spacing="3">01</text>
+</g>
+<ellipse cx="804" cy="761" rx="222" ry="30" fill="#102c34" opacity=".62" filter="url(#shadow)"/>
+<!-- Cape silhouette and folds -->
+<g stroke="#263846" stroke-width="6" stroke-linejoin="round">
+<path fill="url(#cape)" d="M728 342q63 10 114 43c62 9 112 12 168-20-22 70 35 104 96 115-30 18-53 22-80 20 35 38 40 67 38 90-49-38-87-38-135-32-64 9-101 59-196 52-66-52-59-192-5-268z"/>
+<path d="M838 402q86 62 173-36-16 48 2 74-109 37-178-18z" fill="#f18262" stroke="none"/>
+<path d="M851 449q75 54 173 48-48 11-111 6 78 9 151 87-66-43-145-29-48 8-90 35z" fill="#9e3c4a" stroke="none"/>
+<path d="M930 560q77-21 132 26" fill="none" stroke="#f3b265" stroke-width="4"/>
+<!-- Boots and stance -->
+<path fill="url(#navy)" d="M748 550q-50 18-72 72l-32 65q22 30 66 20l52-48 30-86zm62 18 17 79 20 64q37 17 68-5l-9-103-27-62z"/>
+<path d="M699 631q-10 38-54 57 24 15 55 8l58-58-7-22zm146 33 19 43 48-5-6-45z" fill="#162e4a" stroke="none"/>
+<path fill="url(#bill)" d="M647 679q19 6 53 12l-10 33c-5 18-22 25-41 24l-99-2c-24-3-24-25 1-38l60-18zm208 13q30 13 56-4l19 20q35 9 50 23c13 16-6 26-28 27l-88-1q-25-3-26-23z"/>
+<path d="M555 728q40-3 63 1m-37-13q40-3 62 1m290 15q26-4 45 6m-70-20q28-1 43 9" fill="none" stroke="#ac6d46" stroke-width="3"/>
+<!-- Jacket and belt -->
+<path fill="url(#navy)" d="M689 360q58-32 129-6l66 54q19 40-4 97l-20 57q-50 38-127 15l-54-31-27-103q-17-50 37-83z"/>
+<path fill="#416b87" stroke="none" d="M687 377q34 7 58 24l-17 26q-30-29-74-12 6-24 33-38zm129-6q51 13 65 51-20-12-54-8l-20-27z"/>
+<path fill="#16314d" d="M685 526q91 38 190 5l-10 33q-103 31-173-3z"/>
+<path d="M771 548q18-3 38-1l-4 24-31-1z" fill="#f5bd69" stroke="#6c5d56" stroke-width="3"/>
+<!-- Wings -->
+<path fill="url(#iv)" d="M693 371q-31-27-68 4c-24 21-32 47-32 73-30 39-25 76-12 90 28 30 82 20 116-11l-20-39q-27 6-48 10 35-46 61-81 12-25 3-46z"/>
+<path fill="url(#iv)" d="M851 371q32-22 67 6 25 22 26 62 33 37 17 76-20 41-73 45l-39-27 18-43 44 1q-8-19-44-57-24-30-16-63z"/>
+<path fill="#7c9b9c" stroke="none" d="M601 445q-21 25-19 52l22-18-8 28 25-14-7 21 30-22 32-50q-49 46-75 3zm313-7q27 44 36 51l-25-8 11 23-26-13-8 20-33-16 40-4q0-23-25-54z"/>
+<path fill="url(#bill)" d="M665 485q20-11 36 0l11 23q-1 16-14 23l-25 4q-20-10-23-23-5-15 15-27zm210 10q-22-13-39 1l-11 21q0 15 17 25l24 4q19-8 24-25 3-16-15-26z"/>
+<!-- Badge -->
+<path d="M774 412l49 24-11 49-39 29-39-28-10-48z" fill="#f8c47a" stroke="#192f47" stroke-width="4"/>
+<path d="M774 422l37 19-8 38-30 23-31-23-7-36z" fill="#244f6f" stroke="none"/>
+<path d="m749 449 51 5-37 27 6-16z" fill="#fff0b9" stroke="none"/>
+<!-- Neck, scarf, head -->
+<path fill="url(#iv)" d="M713 305q14 31-9 59l14 32q41 33 92-5l13-35-10-56z"/>
+<path fill="url(#cape)" d="M709 359q39 20 110-1l7 22q-45 28-117 3z"/>
+<path fill="url(#iv)" d="M695 252q-17-39 4-72 19-30 52-36-6-19 6-31 19 8 27 23 11-21 34-26-1 19-10 33 17-15 39-12-7 19-20 30 41 21 40 72-2 49-27 75-21 28-62 28-45 0-71-31z"/>
+<path d="M715 199q20-26 49-30-16 14-29 32m89-20q16 10 20 27" fill="none" stroke="#fff9e7" stroke-width="5" stroke-linecap="round"/>
+<path fill="url(#pouch)" d="M719 255q-38 12-83 15l-106 8q25 38 79 58 38 13 83 5 38-7 55-29 18-26-28-57z"/>
+<path d="M563 299q61 36 128 22 26-5 45-26" fill="none" stroke="#f8cf98" stroke-width="4"/>
+<path fill="url(#bill)" d="M716 241q-25-11-54-4l-120 28q-32 7-36 27 19-10 35-6l148-5q38-3 52-21-8-15-25-19z"/>
+<path d="M519 278q23-7 45-10l122-25" fill="none" stroke="#ffe6a5" stroke-width="4" stroke-linecap="round"/>
+<path d="M656 252l12-4" stroke="#975c42" stroke-width="4" stroke-linecap="round"/>
+<!-- Eye, alert brow -->
+<path fill="#fff8e3" d="M748 222q20-21 53-11 5 22-17 38-21 8-39-6z" stroke-width="4"/>
+<path d="M759 222q10-12 24-9 10 7 6 20-6 16-21 12-14-5-9-23z" fill="#589184" stroke-width="3"/>
+<ellipse cx="770" cy="228" rx="7" ry="11" fill="#142e3d" stroke="none"/>
+<circle cx="769" cy="224" r="3.3" fill="#fff8db" stroke="none"/>
+<path fill="#e1d2b1" d="M736 213q28-28 64-14l12 13q-36-8-66 12z" stroke-width="4"/>
+<path d="M810 258q-11 19-30 24m-157 226q11 9 25 9m265-7q12 3 25-3" fill="none" stroke="#a99479" stroke-width="3" stroke-linecap="round"/>
+</g>
+<path d="M1000 137h74m-37-37v74m35 513h39m-19-19v39" stroke="#fff0ca" stroke-width="2" opacity=".74"/>
+</svg>
